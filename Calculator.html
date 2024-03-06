@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../boot/css/all.min.css">
+        <link rel="stylesheet" href="../boot/css/bootstrap.min.css">
+        <style>
+            body{
+                font-family:  High Tower Text;
+            }
+            .c{
+                min-height: 400px;
+                text-align: end;
+                font-size: 20px;
+                font-weight: 800;
+            }
+            h1{
+                padding-bottom: 40px;
+                font-size: 50px;
+                border-bottom: 2px solid darkgray;
+                text-align: center;
+                font-weight: 800;
+            }
+            .btn{
+                height: 45px;
+                width: 90px;
+                border: 2px solid black !important;
+                background-color: lightgray;
+            }
+            .ro{
+                margin-top: 50px;
+                
+  
+            }
+            .a{
+                height: 40px;
+                width: 300px;
+                margin-right: 20px;
+            }
+            input{
+                margin: 10px 0px;
+            }
+            .rw{
+                height: 50px;
+                border-top: 2px solid darkgrey;
+            }
+        </style>
+    </head>
+    <body class="bg-info">
+        <div class="container-fluid">
+            <div class="row bg-info ro">
+                <h1>Simple Calculator using JS</h1>
+                <div class="col-sm-6 mx-auto c p-5">   
+                    <form action="">
+                    Enter 1st value : <input type="number" name="" id="f" class="a"><br>
+                    Enter 2nd value : <input type="number" name="" id="s" class="a"><br>
+                    Result : <input type="number" id="r" class="a"><br>
+                    
+                    <input type="button" name="" id="p" value="+" onclick="demo(this)" class="btn"> 
+                    <input type="button" name="" id="s" value="-" onclick="demo(this)" class="btn "> 
+                    <input type="button" name="" id="m" value="*" onclick="demo(this)" class="btn ">  
+                    <input type="button" name="" id="d" value="/" onclick="demo(this)" class="btn">
+                    <input type="button" name="" id="mo" value="%" onclick="demo(this)" class="btn">
+                   
+                </form>
+                </div>
+            </div>
+            <div class="row   rw">
+
+            </div>
+        </div>
+        <script>
+            var f = document.querySelector("#f") 
+            var s =  document.querySelector("#s") 
+            var r = document.querySelector("#r")
+            var demo = (x) =>{
+                if (x.value=="+"){
+                    r.value=parseInt(f.value)+parseInt(s.value)
+                }
+                if (x.value=="-"){
+                    r.value=parseInt(f.value)-parseInt(s.value)
+                }
+                if (x.value=="*"){
+                    r.value=parseInt(f.value)*parseInt(s.value)
+                }
+                if (x.value=="/"){
+                    r.value=parseInt(f.value)/parseInt(s.value)
+                }
+                if (x.value=="%"){
+                    r.value=parseInt(f.value)%parseInt(s.value)
+                }
+                 
+            }
+        </script>
+    </body>
+</html>
